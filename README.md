@@ -12,12 +12,13 @@
 ### Build
 
 The Makefile gets 3 parameters:
-    USE_CR0 gets either 1 or 0, choosing the method to change the sys_call_table
+    
+[USE_CR0] gets either 1 or 0, choosing the method to change the sys_call_table
     permissions. When set to 1, it changes the value of the register CR0, and otherwise by changing the permmisions to the page of the sys_call_table.
 
-    HIDDEN_NAME files with this name will be hidden.
+[HIDDEN_NAME] files with this name will be hidden.
 
-    CONTROL_PREFIX an openat syscall with a filename argument starting with CONTROL_PREFIX will be used a control magic.
+[CONTROL_PREFIX] an openat syscall with a filename argument starting with CONTROL_PREFIX will be used a control magic.
     
 ```shell
 $ git clone https://github.com/sschwartzer/hideyourself
