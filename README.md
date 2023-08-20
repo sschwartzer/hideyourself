@@ -2,9 +2,10 @@
 
 ## Features
 
-- Hide process
-- Hide files that with the name [HIDDEN_NAME] 
-- Dynamicly change the hidden process by 'cat'ting  on a string that strart with [CONTROL_PREFIX] and followed by the new `hidden_pid`. for e.g, HIDE_ME is set as the[CONTROL_PREFIX]: `cat HIDEME_<hide_pid>`
+- Hide a process
+-  Hide files by name [HIDDEN_NAME] 
+- Dynamicly change the hidden process by 'cat'ting  on a string that strart with [CONTROL_PREFIX] and followed by the new `hidden_pid`.
+  for example, if "HIDE_ME_" is the [CONTROL_PREFIX]: `cat HIDE_ME_<hide_pid>`.
 
 ## installation
 
@@ -38,3 +39,5 @@ $ dmesg # verify that rootkit has been loaded
 $ rmmod main
 $ dmesg # verify that rootkit has been unloaded
 ```
+
+tested on kernel 5.4.0 Ubuntu 20.04.6 LTS
